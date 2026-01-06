@@ -3,6 +3,7 @@ package com.fitness.activityservice.services;
 import com.fitness.activityservice.dtos.ActivityRequest;
 import com.fitness.activityservice.dtos.ActivityResponse;
 import com.fitness.activityservice.models.Activity;
+import com.fitness.activityservice.producers.ActivityProducer;
 import com.fitness.activityservice.repository.ActivityRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,7 @@ public class ActivityService {
 
     private final ActivityRepository activityRepository;
     private final UserValidationService userValidationService;
+    private final ActivityProducer activityProducer;
 
     public ActivityResponse trackActivity(ActivityRequest request) {
 
@@ -35,6 +37,8 @@ public class ActivityService {
                 .build();
 
         Activity savedActivity = activityRepository.save(activity);
+
+        activityProducer.sendActivity(savedActivity);
 
         return mapToResponse(savedActivity);
     }

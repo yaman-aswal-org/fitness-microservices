@@ -4,6 +4,8 @@ import com.fitness.userservice.dtos.RegisterRequest;
 import com.fitness.userservice.dtos.UserResponse;
 import com.fitness.userservice.models.User;
 import com.fitness.userservice.repository.UserRepository;
+import exceptions.EmailAlreadyExistsException;
+import exceptions.UserNotFoundException;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,7 @@ public class UserService {
     public UserResponse register(@Valid RegisterRequest request) {
 
         if (repository.existsByEmail(request.getEmail())) {
-            throw new RuntimeException("Email already exist.");
+            throw new EmailAlreadyExistsException();
         }
 
         User user = new User();
@@ -40,8 +42,7 @@ public class UserService {
     }
 
     public UserResponse getUserProfile(String userId) {
-        User user = repository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("user not found."));
+        User user = repository.findById(userId).orElseThrow(UserNotFoundException::new);
 
         UserResponse userResponse = new UserResponse();
         userResponse.setId(user.getId());
