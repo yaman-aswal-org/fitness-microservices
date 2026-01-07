@@ -68,7 +68,7 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.yaman-aswal-org.platform</groupId>
+			<groupId>io.yaman.spring.exception</groupId>
 			<artifactId>spring-boot-exception-lib</artifactId>
 			<version>1.0.0</version>
 		</dependency>

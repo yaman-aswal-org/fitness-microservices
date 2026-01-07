@@ -1,4 +1,15 @@
 services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.5.0
+    container_name: keycloak
+    command: start-dev
+    ports:
+      - "127.0.0.1:8181:8080"
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    restart: unless-stopped
+
   postgres:
     image: postgres:15
     container_name: postgres_db
@@ -54,6 +65,9 @@ services:
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     restart: unless-stopped
+
+
+
 
 volumes:
   pgdata:
