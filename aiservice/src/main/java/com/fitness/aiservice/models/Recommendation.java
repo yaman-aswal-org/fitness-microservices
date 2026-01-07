@@ -1,6 +1,7 @@
 package com.fitness.aiservice.models;
 
 
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Document(collection = "recommendations")
 @Data
+@Builder
 public class Recommendation {
 
     @Id
