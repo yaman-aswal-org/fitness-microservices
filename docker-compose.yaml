@@ -23,11 +23,6 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
-  #Route: http://localhost:5050
-  #Host: postgres
-  #Port: 5432
-  #Username: admin
-  #Password: admin123
 
   pgadmin:
     image: dpage/pgadmin4
