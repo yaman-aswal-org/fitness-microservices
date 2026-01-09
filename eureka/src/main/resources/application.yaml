@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: eureka
+  profiles:
+    default: local
 
 eureka:
   client:

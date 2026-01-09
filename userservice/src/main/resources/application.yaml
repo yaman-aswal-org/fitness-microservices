@@ -1,6 +1,6 @@
 
 spring:
   application:
-    name: activity-service
+    name: user-service
   profiles:
     default: local
