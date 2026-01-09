@@ -74,6 +74,14 @@
 		</dependency>
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/yaman-aswal-org/spring-boot-exception-lib</url>
+		</repository>
+	</repositories>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
