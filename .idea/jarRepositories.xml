@@ -13,6 +13,11 @@
     </remote-repository>
     <remote-repository>
       <option name="id" value="github" />
+      <option name="name" value="GitHub Packages" />
+      <option name="url" value="https://maven.pkg.github.com/yaman-aswal-org/spring-boot-exception-lib" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
       <option name="name" value="github" />
       <option name="url" value="https://maven.pkg.github.com/yaman-aswal-org/spring-boot-exception-lib" />
     </remote-repository>

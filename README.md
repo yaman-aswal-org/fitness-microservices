@@ -48,7 +48,16 @@
    * SPRING_PROFILES_ACTIVE=prod,native
    * PORT = 8888
 2. Eureka
-   * PROD → 
-   * 
+   * PROD → https://eureka-q8n6.onrender.com/
+   * SPRING_PROFILES_ACTIVE=prod
+   * PORT = 8761
+3. User Service
+    * PROD → https://activity-service-2g1d.onrender.com
+    * SPRING_PROFILES_ACTIVE=prod
+    * PORT = 8082
+4. Activity Service
+   * PROD → https://activity-service-2g1d.onrender.com
+   * SPRING_PROFILES_ACTIVE=prod
+   * PORT = 8082
 
 
