@@ -16,10 +16,12 @@
 
 ### Routes:
 1. Config Server :-
-   * Local → http://localhost:8761/ 
-2. PgAdmin :-
+    * Local → http://localhost:8888/
+2. Eureka :-
+   * Local → http://localhost:8761/
+3. PgAdmin :-
    * Local → http://localhost:5050/
-3. Api Gateway :-
+4. Api Gateway :-
    * Local → http://localhost:8080/
 
 ### Databases
@@ -40,6 +42,13 @@
    * Queue Name: activity.queue
 
 
-   
+### Render (Prod) 
+1. Config Server 
+   * PROD → https://configserver-k9gt.onrender.com/
+   * SPRING_PROFILES_ACTIVE=prod,native
+   * PORT = 8888
+2. Eureka
+   * PROD → 
+   * 
 
 
