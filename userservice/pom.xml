@@ -121,6 +121,14 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-http</artifactId>
+				<version>3.5.3</version>
+			</extension>
+		</extensions>
 	</build>
 
 </project>

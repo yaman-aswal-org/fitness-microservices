@@ -52,12 +52,16 @@
    * SPRING_PROFILES_ACTIVE=prod
    * PORT = 8761
 3. User Service
-    * PROD → https://activity-service-2g1d.onrender.com
+    * PROD → https://userservice-gjy6.onrender.com
     * SPRING_PROFILES_ACTIVE=prod
     * PORT = 8082
 4. Activity Service
    * PROD → https://activity-service-2g1d.onrender.com
    * SPRING_PROFILES_ACTIVE=prod
    * PORT = 8082
+5. Ai Service
+   * PROD → https://ai-service-l866.onrender.com
+   * SPRING_PROFILES_ACTIVE=prod
+   * PORT = 8083
 
 
