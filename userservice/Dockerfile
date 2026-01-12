@@ -5,6 +5,8 @@ WORKDIR /app
 COPY settings.xml /root/.m2/settings.xml
 COPY pom.xml .
 
+RUN echo "USERNAME=$GITHUB_USERNAME" && echo "TOKEN=${#GITHUB_TOKEN}"
+
 # Download dependencies
 RUN mvn dependency:go-offline -s /root/.m2/settings.xml
 
