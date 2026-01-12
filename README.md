@@ -51,7 +51,11 @@
    * PROD → https://eureka-q8n6.onrender.com/
    * SPRING_PROFILES_ACTIVE=prod
    * PORT = 8761
-3. User Service
+3. API Gateway
+   * PROD → https://api-gateway-roe8.onrender.com
+   * SPRING_PROFILES_ACTIVE=prod
+   * PORT = 8080
+4. User Service
     * PROD → https://userservice-gjy6.onrender.com
     * SPRING_PROFILES_ACTIVE=prod
     * PORT = 8082
