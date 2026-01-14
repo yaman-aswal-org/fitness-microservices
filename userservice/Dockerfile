@@ -2,10 +2,16 @@
 FROM maven:3.9.9-eclipse-temurin-21 AS build
 WORKDIR /app
 
+# declare build arguments
+ARG GITHUB_USERNAME
+ARG GITHUB_TOKEN
+
+# expose them as env vars for Maven
+ENV GITHUB_USERNAME=${GITHUB_USERNAME}
+ENV GITHUB_TOKEN=${GITHUB_TOKEN}
+
 COPY settings.xml /root/.m2/settings.xml
 COPY pom.xml .
-
-RUN echo "USERNAME=$GITHUB_USERNAME" && echo "TOKEN=${#GITHUB_TOKEN}"
 
 # Download dependencies
 RUN mvn dependency:go-offline -s /root/.m2/settings.xml
