@@ -71,7 +71,7 @@ public class UserService {
         return repository.existsById(userId);
     }
 
-    public Boolean existByKeyCloakId(String userId) {
-        return repository.existByKeyCloakId(userId);
+    public Boolean existsByKeyCloakId(String userId) {
+        return repository.existsByKeyCloakId(userId);
     }
 }

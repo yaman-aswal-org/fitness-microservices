@@ -9,7 +9,7 @@ public interface UserRepository extends JpaRepository<User, String> {
 
     boolean existsByEmail(String email);
 
-    Boolean existByKeyCloakId(String keyCloakId);
+    Boolean existsByKeyCloakId(String keyCloakId);
 
     User findByEmail(String email);
 }
